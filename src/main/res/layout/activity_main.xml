@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutBackground"
+    android:background="@drawable/gradient"
+    tools:context="com.neuandroid.weatherapp.ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/refreshView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/refresh"
+        android:layout_marginLeft="170dp"/>
+
+    <ProgressBar
+        android:id="@+id/refresshprogressBar"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"/>
+
+    <TextView
+        android:id="@+id/lastRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="70dp"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Almanac je suis la"
+            android:gravity="center"
+            android:textColor="@color/textcolor"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/timeTextColor"
+            android:text="@string/timeText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/skyState"
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:src="@drawable/cloudy"
+                android:layout_weight="0.53"/>
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="100sp"
+                android:textColor="@color/textcolor"
+                android:text="@string/temperature_text"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/degree"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="100dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/timeTextColor"
+                    android:text="@string/humide"/>
+
+                <TextView
+                    android:id="@+id/humidityPrct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/textcolor"
+                    android:text="@string/temperature_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="60dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rain"
+                    android:textColor="@color/timeTextColor"/>
+
+                <TextView
+                    android:id="@+id/rainProb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/textcolor"
+                    android:text="@string/temperature_text"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/remindComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/textcolor"
+            android:text="@string/introWeather"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/hourly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/buttons"
+                android:text="@string/button1"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="2dp"
+                android:textColor="@color/textcolor"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/buttons"
+                android:textColor="@color/textcolor"
+                android:text="@string/button2"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
